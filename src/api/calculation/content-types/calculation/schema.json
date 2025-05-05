@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "calculations",
+  "info": {
+    "singularName": "calculation",
+    "pluralName": "calculations",
+    "displayName": "Calculation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "calc_name": {
+      "type": "string"
+    },
+    "platform": {
+      "type": "enumeration",
+      "enum": [
+        "Google",
+        "VK",
+        "Яндекс"
+      ]
+    },
+    "budget": {
+      "type": "decimal"
+    },
+    "company_objectives": {
+      "type": "text"
+    },
+    "creation_date": {
+      "type": "datetime"
+    },
+    "results": {
+      "type": "text"
+    },
+    "polzovatels": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::polzovatel.polzovatel",
+      "inversedBy": "calculations"
+    }
+  }
+}

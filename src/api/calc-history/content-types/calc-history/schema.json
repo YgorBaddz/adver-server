@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "calc_histories",
+  "info": {
+    "singularName": "calc-history",
+    "pluralName": "calc-histories",
+    "displayName": "Calc-history",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "polzovatel": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::polzovatel.polzovatel",
+      "inversedBy": "calc_histories"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

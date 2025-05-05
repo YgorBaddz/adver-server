@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "polzovatels",
+  "info": {
+    "singularName": "polzovatel",
+    "pluralName": "polzovatels",
+    "displayName": "polzovatel",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "username": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "company": {
+      "type": "text"
+    },
+    "calculations": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::calculation.calculation",
+      "mappedBy": "polzovatels"
+    },
+    "calc_histories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::calc-history.calc-history",
+      "mappedBy": "polzovatel"
+    },
+    "password": {
+      "type": "string"
+    }
+  }
+}
