@@ -39,6 +39,35 @@
       "relation": "manyToMany",
       "target": "api::polzovatel.polzovatel",
       "inversedBy": "calculations"
+    },
+    "adType": {
+      "type": "enumeration",
+      "enum": [
+        "digital",
+        "billboard",
+        "leaflet"
+      ]
+    },
+    "goal": {
+      "type": "text"
+    },
+    "billboardDays": {
+      "type": "integer"
+    },
+    "billboardCity": {
+      "type": "string"
+    },
+    "billboardSize": {
+      "type": "decimal"
+    },
+    "leafletCount": {
+      "type": "integer"
+    },
+    "leafletMaterialCost": {
+      "type": "decimal"
+    },
+    "leafletDistributionCost": {
+      "type": "decimal"
     }
   }
 }

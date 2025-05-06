@@ -415,6 +415,10 @@ export interface ApiCalculationCalculation extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    adType: Schema.Attribute.Enumeration<['digital', 'billboard', 'leaflet']>;
+    billboardCity: Schema.Attribute.String;
+    billboardDays: Schema.Attribute.Integer;
+    billboardSize: Schema.Attribute.Decimal;
     budget: Schema.Attribute.Decimal;
     calc_name: Schema.Attribute.String;
     company_objectives: Schema.Attribute.Text;
@@ -422,6 +426,10 @@ export interface ApiCalculationCalculation extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     creation_date: Schema.Attribute.DateTime;
+    goal: Schema.Attribute.Text;
+    leafletCount: Schema.Attribute.Integer;
+    leafletDistributionCost: Schema.Attribute.Decimal;
+    leafletMaterialCost: Schema.Attribute.Decimal;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
