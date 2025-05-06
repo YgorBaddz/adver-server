@@ -426,7 +426,10 @@ export interface ApiCalculationCalculation extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     creation_date: Schema.Attribute.DateTime;
+    duration: Schema.Attribute.Integer;
+    geo: Schema.Attribute.String;
     goal: Schema.Attribute.Text;
+    keywords: Schema.Attribute.Integer;
     leafletCount: Schema.Attribute.Integer;
     leafletDistributionCost: Schema.Attribute.Decimal;
     leafletMaterialCost: Schema.Attribute.Decimal;

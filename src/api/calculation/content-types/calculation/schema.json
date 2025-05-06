@@ -68,6 +68,15 @@
     },
     "leafletDistributionCost": {
       "type": "decimal"
+    },
+    "geo": {
+      "type": "string"
+    },
+    "keywords": {
+      "type": "integer"
+    },
+    "duration": {
+      "type": "integer"
     }
   }
 }
