@@ -421,6 +421,7 @@ export interface ApiCalculationCalculation extends Struct.CollectionTypeSchema {
     billboardSize: Schema.Attribute.Decimal;
     budget: Schema.Attribute.Decimal;
     calc_name: Schema.Attribute.String;
+    calculation_details: Schema.Attribute.Text;
     company_objectives: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
